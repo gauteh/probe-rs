@@ -203,6 +203,7 @@ pub trait ArmDebugSequence: Send + Sync {
     /// [ARM SVD Debug Description]: http://www.keil.com/pack/doc/cmsis/Pack/html/debug_description.html#resetCatchSet
     #[doc(alias = "ResetCatchSet")]
     fn reset_catch_set(&self, core: &mut Memory) -> Result<(), crate::Error> {
+        log::debug!("resetcatchset");
         use crate::architecture::arm::core::armv7m::{Demcr, Dhcsr};
 
         // Request halt after reset
@@ -211,9 +212,11 @@ pub trait ArmDebugSequence: Send + Sync {
 
         core.write_word_32(Demcr::ADDRESS, demcr.into())?;
 
+        thread::sleep(Duration::from_millis(1000));
         // Clear the status bits by reading from DHCSR
         let _ = core.read_word_32(Dhcsr::ADDRESS)?;
 
+        log::debug!("resetcatchset: done");
         Ok(())
     }
 
@@ -230,6 +233,7 @@ pub trait ArmDebugSequence: Send + Sync {
         let mut demcr = Demcr(core.read_word_32(Demcr::ADDRESS)?);
         demcr.set_vc_corereset(false);
 
+        thread::sleep(Duration::from_millis(1000));
         core.write_word_32(Demcr::ADDRESS, demcr.into())?;
         Ok(())
     }
@@ -241,6 +245,7 @@ pub trait ArmDebugSequence: Send + Sync {
     /// [ARM SVD Debug Description]: http://www.keil.com/pack/doc/cmsis/Pack/html/debug_description.html#resetSystem
     #[doc(alias = "ResetSystem")]
     fn reset_system(&self, interface: &mut Memory) -> Result<(), crate::Error> {
+        log::debug!("reset system");
         use crate::architecture::arm::core::armv7m::{Aircr, Dhcsr};
 
         let mut aircr = Aircr(0);
@@ -248,18 +253,28 @@ pub trait ArmDebugSequence: Send + Sync {
         aircr.set_sysresetreq(true);
 
         interface.write_word_32(Aircr::ADDRESS, aircr.into())?;
+        log::debug!("reset system: written");
 
         let start = Instant::now();
 
-        while start.elapsed() < Duration::from_micros(50_0000) {
-            let dhcsr = Dhcsr(interface.read_word_32(Dhcsr::ADDRESS)?);
+        while start.elapsed() < Duration::from_millis(15_000) {
+            thread::sleep(Duration::from_millis(100));
+            let w = interface.read_word_32(Dhcsr::ADDRESS);
+            if let Ok(w) = w {
+                let dhcsr = Dhcsr(w);
 
-            // Wait until the S_RESET_ST bit is cleared on a read
-            if !dhcsr.s_reset_st() {
-                return Ok(());
+                // Wait until the S_RESET_ST bit is cleared on a read
+                if !dhcsr.s_reset_st() {
+                    log::debug!("reset system: done");
+                    return Ok(());
+                }
+            } else {
+                log::warn!("couldn't read dhcsr, ignoring.. {:?}", w);
+                    return Ok(());
             }
         }
 
+        log::debug!("reset system: err");
         Err(crate::Error::Probe(DebugProbeError::Timeout))
     }
 

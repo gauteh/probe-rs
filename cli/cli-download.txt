@@ -1,0 +1,1154 @@
+warning: field is never read: `debug_port_version`
+   --> probe-rs/src/architecture/arm/communication_interface.rs:123:5
+    |
+123 |     pub debug_port_version: DebugPortVersion,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: field is never read: `kind`
+  --> probe-rs/src/core/mod.rs:43:5
+   |
+43 |     pub(crate) kind: RegisterKind,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `address`
+   --> probe-rs/src/core/mod.rs:535:5
+    |
+535 |     address: u32,
+    |     ^^^^^^^^^^^^
+
+warning: field is never read: `register_hw`
+   --> probe-rs/src/core/mod.rs:536:5
+    |
+536 |     register_hw: usize,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `register_description`
+   --> probe-rs/src/debug/mod.rs:129:5
+    |
+129 |     register_description: &'static RegisterFile,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `swd_implemented`
+   --> probe-rs/src/probe/cmsisdap/commands/general/info.rs:129:5
+    |
+129 |     pub(crate) swd_implemented: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `jtag_implemented`
+   --> probe-rs/src/probe/cmsisdap/commands/general/info.rs:130:5
+    |
+130 |     pub(crate) jtag_implemented: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `atomic_commands_implemented`
+   --> probe-rs/src/probe/cmsisdap/commands/general/info.rs:133:5
+    |
+133 |     pub(crate) atomic_commands_implemented: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `test_domain_timer_implemented`
+   --> probe-rs/src/probe/cmsisdap/commands/general/info.rs:134:5
+    |
+134 |     pub(crate) test_domain_timer_implemented: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `uart_communication_port_implemented`
+   --> probe-rs/src/probe/cmsisdap/commands/general/info.rs:136:5
+    |
+136 |     pub(crate) uart_communication_port_implemented: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `status`
+  --> probe-rs/src/probe/cmsisdap/commands/general/reset.rs:42:5
+   |
+42 |     pub status: Status,
+   |     ^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `execute`
+  --> probe-rs/src/probe/cmsisdap/commands/general/reset.rs:43:5
+   |
+43 |     pub execute: Execute,
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `active`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:140:5
+    |
+140 |     pub(crate) active: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `overrun`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:142:5
+    |
+142 |     pub(crate) overrun: bool,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `status`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:157:5
+    |
+157 |     pub(crate) status: TraceStatus,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `count`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:158:5
+    |
+158 |     pub(crate) count: u32,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `status`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:213:5
+    |
+213 |     pub(crate) status: TraceStatus,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `count`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:214:5
+    |
+214 |     pub(crate) count: u32,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `index`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:215:5
+    |
+215 |     pub(crate) index: u32,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `timestamp`
+   --> probe-rs/src/probe/cmsisdap/commands/swo.rs:216:5
+    |
+216 |     pub(crate) timestamp: u32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `transfer_count`
+   --> probe-rs/src/probe/cmsisdap/commands/transfer/mod.rs:366:5
+    |
+366 |     transfer_count: u16,
+    |     ^^^^^^^^^^^^^^^^^^^
+
+warning: field is never read: `state`
+   --> probe-rs/src/probe/fake_probe.rs:199:5
+    |
+199 |     state: S,
+    |     ^^^^^^^^
+
+warning: `probe-rs` (lib) generated 22 warnings
+    Finished dev [unoptimized + debuginfo] target(s) in 0.08s
+     Running `/home/gauteh/dev/embedded/probe-rs/target/debug/probe-rs-cli download --chip AMA3B1KK-KBR /home/gauteh/met/sfy/sfy-code/sfy-buoy/target/thumbv7em-none-eabihf/debug/sfy-buoy`
+ DEBUG probe_rs::config::registry > Searching registry for chip with name AMA3B1KK-KBR
+ DEBUG probe_rs::config::registry > Exact match for chip name: AMA3B1KK-KBR
+ DEBUG probe_rs::probe::cmsisdap::tools > Searching for CMSIS-DAP probes using libusb
+ DEBUG probe_rs::probe::cmsisdap::tools > Found 0 CMSIS-DAP probes using libusb, searching HID
+ DEBUG probe_rs::probe::cmsisdap::tools > Found 0 CMSIS-DAP probes total
+ DEBUG jaylink                          > libusb 1.0.24.11584
+ DEBUG jaylink                          > libusb has capability API: true
+ DEBUG jaylink                          > libusb has HID access: true
+ DEBUG jaylink                          > libusb has hotplug support: true
+ DEBUG jaylink                          > libusb can detach kernel driver: true
+ DEBUG jaylink                          > open_usb: device descriptor: DeviceDescriptor {
+    bLength: 0x12,
+    bDescriptorType: 0x1,
+    bcdUSB: 0x200,
+    bDeviceClass: 0x0,
+    bDeviceSubClass: 0x0,
+    bDeviceProtocol: 0x0,
+    bMaxPacketSize: 0x40,
+    idVendor: 0x1366,
+    idProduct: 0x101,
+    bcdDevice: 0x100,
+    iManufacturer: 0x1,
+    iProduct: 0x2,
+    iSerialNumber: 0x3,
+    bNumConfigurations: 0x1,
+}
+ DEBUG jaylink                          > scanning 1 interfaces
+ TRACE jaylink                          > active configuration descriptor: ConfigDescriptor {
+    bLength: 0x9,
+    bDescriptorType: 0x2,
+    wTotalLength: 0x20,
+    bNumInterfaces: 0x1,
+    bConfigurationValue: 0x1,
+    iConfiguration: 0x4,
+    bmAttributes: 0x80,
+    bMaxPower: 0x32,
+    extra: None,
+}
+ TRACE jaylink                          > interface #1 descriptors:
+ TRACE jaylink                          > InterfaceDescriptor {
+    bLength: 0x9,
+    bDescriptorType: 0x4,
+    bInterfaceNumber: 0x0,
+    bAlternateSetting: 0x0,
+    bNumEndpoints: 0x2,
+    bInterfaceClass: 0xff,
+    bInterfaceSubClass: 0xff,
+    bInterfaceProtocol: 0xff,
+    iInterface: 0x5,
+}
+ TRACE jaylink                          > endpoint descriptors: [
+    EndpointDescriptor {
+        bLength: 0x7,
+        bDescriptorType: 0x5,
+        bEndpointAddress: 0x81,
+        bmAttributes: 0x2,
+        wMaxPacketSize: 0x40,
+        bInterval: 0x1,
+    },
+    EndpointDescriptor {
+        bLength: 0x7,
+        bDescriptorType: 0x5,
+        bEndpointAddress: 0x2,
+        bmAttributes: 0x2,
+        wMaxPacketSize: 0x40,
+        bInterval: 0x1,
+    },
+]
+ DEBUG jaylink                          > J-Link interface is #0
+ TRACE jaylink                          > write 1 bytes: [e8]
+ TRACE jaylink                          > read 4 bytes: [33, 5a, ea, b8]
+ DEBUG jaylink                          > legacy caps: GetHwVersion | ReadConfig | WriteConfig | SpeedInfo | GetMaxBlockSize | GetHwInfo | ResetStopTimed | SelectIf | GetCounters | GetCpuCaps | ExecCpuCmd | Swo | Register | Indicators | TestNetSpeed | GetCapsEx
+ TRACE jaylink                          > write 1 bytes: [ed]
+ TRACE jaylink                          > read 32 bytes: [33, 5a, ea, b8, 1c, 7c, b0, 46, a1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG jaylink::capabilities            > unknown ext. capability bits: 0xA146B07C1CB8EA5A33 truncated to 0xB8EA5A33 (Reserved0 | GetHwVersion | ReadConfig | WriteConfig | SpeedInfo | GetMaxBlockSize | GetHwInfo | ResetStopTimed | SelectIf | GetCounters | GetCpuCaps | ExecCpuCmd | Swo | Register | Indicators | TestNetSpeed | GetCapsEx)
+ DEBUG jaylink                          > extended caps: GetHwVersion | ReadConfig | WriteConfig | SpeedInfo | GetMaxBlockSize | GetHwInfo | ResetStopTimed | SelectIf | GetCounters | GetCpuCaps | ExecCpuCmd | Swo | Register | Indicators | TestNetSpeed | GetCapsEx
+ TRACE jaylink                          > write 2 bytes: [c7, ff]
+ TRACE jaylink                          > read 4 bytes: [83, 0, 0, 0]
+ TRACE probe_rs::probe::cmsisdap::tools > Attempting to open device matching 1366:0101:000801036807
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 004 Device 001: ID 1d6b:0003
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 003 Device 001: ID 1d6b:0002
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 002 Device 001: ID 1d6b:0003
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 005: ID 04ca:706d
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 004: ID 138a:00ab
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 003: ID 8087:0a2b
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 071: ID 1366:0101
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 070: ID 1a86:7523
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 069: ID 1a40:0101
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 002: ID 3938:1031
+ TRACE probe_rs::probe::cmsisdap::tools > Trying device Bus 001 Device 001: ID 1d6b:0002
+ DEBUG probe_rs::probe::cmsisdap::tools > Attempting to open 1366:0101 in CMSIS-DAP v1 mode
+ DEBUG probe_rs::probe::stlink::usb_interface > Acquired libusb context.
+ DEBUG jaylink                                > open_usb: device descriptor: DeviceDescriptor {
+    bLength: 0x12,
+    bDescriptorType: 0x1,
+    bcdUSB: 0x200,
+    bDeviceClass: 0x0,
+    bDeviceSubClass: 0x0,
+    bDeviceProtocol: 0x0,
+    bMaxPacketSize: 0x40,
+    idVendor: 0x1366,
+    idProduct: 0x101,
+    bcdDevice: 0x100,
+    iManufacturer: 0x1,
+    iProduct: 0x2,
+    iSerialNumber: 0x3,
+    bNumConfigurations: 0x1,
+}
+ DEBUG jaylink                                > scanning 1 interfaces
+ TRACE jaylink                                > active configuration descriptor: ConfigDescriptor {
+    bLength: 0x9,
+    bDescriptorType: 0x2,
+    wTotalLength: 0x20,
+    bNumInterfaces: 0x1,
+    bConfigurationValue: 0x1,
+    iConfiguration: 0x4,
+    bmAttributes: 0x80,
+    bMaxPower: 0x32,
+    extra: None,
+}
+ TRACE jaylink                                > interface #1 descriptors:
+ TRACE jaylink                                > InterfaceDescriptor {
+    bLength: 0x9,
+    bDescriptorType: 0x4,
+    bInterfaceNumber: 0x0,
+    bAlternateSetting: 0x0,
+    bNumEndpoints: 0x2,
+    bInterfaceClass: 0xff,
+    bInterfaceSubClass: 0xff,
+    bInterfaceProtocol: 0xff,
+    iInterface: 0x5,
+}
+ TRACE jaylink                                > endpoint descriptors: [
+    EndpointDescriptor {
+        bLength: 0x7,
+        bDescriptorType: 0x5,
+        bEndpointAddress: 0x81,
+        bmAttributes: 0x2,
+        wMaxPacketSize: 0x40,
+        bInterval: 0x1,
+    },
+    EndpointDescriptor {
+        bLength: 0x7,
+        bDescriptorType: 0x5,
+        bEndpointAddress: 0x2,
+        bmAttributes: 0x2,
+        wMaxPacketSize: 0x40,
+        bInterval: 0x1,
+    },
+]
+ DEBUG jaylink                                > J-Link interface is #0
+ TRACE jaylink                                > write 1 bytes: [e8]
+ TRACE jaylink                                > read 4 bytes: [33, 5a, ea, b8]
+ DEBUG jaylink                                > legacy caps: GetHwVersion | ReadConfig | WriteConfig | SpeedInfo | GetMaxBlockSize | GetHwInfo | ResetStopTimed | SelectIf | GetCounters | GetCpuCaps | ExecCpuCmd | Swo | Register | Indicators | TestNetSpeed | GetCapsEx
+ TRACE jaylink                                > write 1 bytes: [ed]
+ TRACE jaylink                                > read 32 bytes: [33, 5a, ea, b8, 1c, 7c, b0, 46, a1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG jaylink::capabilities                  > unknown ext. capability bits: 0xA146B07C1CB8EA5A33 truncated to 0xB8EA5A33 (Reserved0 | GetHwVersion | ReadConfig | WriteConfig | SpeedInfo | GetMaxBlockSize | GetHwInfo | ResetStopTimed | SelectIf | GetCounters | GetCpuCaps | ExecCpuCmd | Swo | Register | Indicators | TestNetSpeed | GetCapsEx)
+ DEBUG jaylink                                > extended caps: GetHwVersion | ReadConfig | WriteConfig | SpeedInfo | GetMaxBlockSize | GetHwInfo | ResetStopTimed | SelectIf | GetCounters | GetCpuCaps | ExecCpuCmd | Swo | Register | Indicators | TestNetSpeed | GetCapsEx
+ TRACE jaylink                                > write 2 bytes: [c7, ff]
+ TRACE jaylink                                > read 4 bytes: [83, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink                 > J-Link returned interface CJtag, which is not supported by probe-rs.
+ DEBUG probe_rs::probe::jlink                 > Attaching to J-Link
+ TRACE jaylink                                > write 2 bytes: [c7, 1]
+ TRACE jaylink                                > read 4 bytes: [0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink                 > Attaching with protocol 'SWD'
+ INFO  probe_rs::probe::jlink                 > J-Link: S/N: 801036807
+ DEBUG probe_rs::probe::jlink                 > J-Link: Capabilities: GetHwVersion | ReadConfig | WriteConfig | SpeedInfo | GetMaxBlockSize | GetHwInfo | ResetStopTimed | SelectIf | GetCounters | GetCpuCaps | ExecCpuCmd | Swo | Register | Indicators | TestNetSpeed | GetCapsEx
+ TRACE jaylink                                > write 1 bytes: [1]
+ TRACE jaylink                                > read 2 bytes: [70, 0]
+ TRACE jaylink                                > read 112 bytes: [4a, 2d, 4c, 69, 6e, 6b, 20, 45, 44, 55, 20, 4d, 69, 6e, 69, 20, 56, 31, 20, 63, 6f, 6d, 70, 69, 6c, 65, 64, 20, 53, 65, 70, 20, 32, 34, 20, 32, 30, 32, 31, 20, 31, 36, 3a, 34, 34, 3a, 31, 31, 0, 43, 6f, 70, 79, 72, 69, 67, 68, 74, 20, 32, 30, 31, 36, 2d, 32, 30, 31, 36, 20, 53, 45, 47, 47, 45, 52, 3a, 20, 77, 77, 77, 2e, 73, 65, 67, 67, 65, 72, 2e, 63, 6f, 6d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+ INFO  probe_rs::probe::jlink                 > J-Link: Firmware version: J-Link EDU Mini V1 compiled Sep 24 2021 16:44:11
+ TRACE jaylink                                > write 1 bytes: [f0]
+ TRACE jaylink                                > read 4 bytes: [10, 27, 0, 0]
+ INFO  probe_rs::probe::jlink                 > J-Link: Hardware version: J-Link 1.0.0
+ TRACE jaylink                                > write 1 bytes: [7]
+ TRACE jaylink                                > read 8 bytes: [dd, c, 0, 1, 1, 1, 1, ff]
+ INFO  probe_rs::probe::jlink                 > J-Link: Target voltage: 3.29 V
+ DEBUG probe_rs::probe::jlink                 > Attached succesfully
+ TRACE jaylink                                > write 18 bytes: [cf, 0, 33, 0, ff, ff, ff, ff, ff, ff, 7, ff, ff, ff, ff, ff, ff, 7]
+ TRACE jaylink                                > read 8 bytes: [0, 0, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                > write 8 bytes: [cf, 0, 10, 0, ff, ff, 9e, e7]
+ TRACE jaylink                                > read 3 bytes: [0, 0, 0]
+ TRACE jaylink                                > write 18 bytes: [cf, 0, 33, 0, ff, ff, ff, ff, ff, ff, 7, ff, ff, ff, ff, ff, ff, 7]
+ TRACE jaylink                                > read 8 bytes: [0, 0, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                > write 6 bytes: [cf, 0, 3, 0, 7, 0]
+ TRACE jaylink                                > read 2 bytes: [0, 0]
+ DEBUG probe_rs::probe::jlink::swd            > Performing 1 transfers (0 additional transfers)
+ TRACE jaylink                                > write 18 bytes: [cf, 0, 38, 0, ff, 3, 0, 0, 0, 0, ff, 94, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                > read 8 bytes: [0, e4, 8e, 2, 74, 5, 0, 0]
+ TRACE probe_rs::probe::jlink::swd            > DAP read 731911287.
+ DEBUG probe_rs::probe::jlink::swd            > Transfer result 0: Ok(2ba01477)
+ DEBUG probe_rs::architecture::arm::communication_interface > Selecting DP Default
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register ABORT, value=0x0000001e
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 1 transfers (0 additional transfers)
+ TRACE jaylink                                              > write 20 bytes: [cf, 0, 3a, 0, ff, 83, ff, ff, ff, ff, ff, 3, 4, 2, f, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 9 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register SELECT, value=0x00000000
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, c4, 2, 0, 0, 0, 0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::dp                      > Reading DP register CTRL/STAT
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 1 transfers (0 additional transfers)
+ TRACE jaylink                                              > write 18 bytes: [cf, 0, 38, 0, ff, 3, 0, 0, 0, 0, ff, 34, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 8 bytes: [0, 4, 8, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 64.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(40)
+ DEBUG probe_rs::architecture::arm::dp                      > Read    DP register CTRL/STAT, value=0x00000040
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register CTRL/STAT, value=0x50000000
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, a4, 2, 0, 0, 0, 28, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::dp                      > Reading DP register CTRL/STAT
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 1 transfers (0 additional transfers)
+ TRACE jaylink                                              > write 18 bytes: [cf, 0, 38, 0, ff, 3, 0, 0, 0, 0, ff, 34, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 8 bytes: [0, 4, 8, 0, 0, fe, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 4026531904.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(f0000040)
+ DEBUG probe_rs::architecture::arm::dp                      > Read    DP register CTRL/STAT, value=0xf0000040
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register CTRL/STAT, value=0x50000f00
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, a4, 2, 80, 7, 0, 28, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::dp                      > Reading DP register CTRL/STAT
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 1 transfers (0 additional transfers)
+ TRACE jaylink                                              > write 18 bytes: [cf, 0, 38, 0, ff, 3, 0, 0, 0, 0, ff, 34, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 8 bytes: [0, 4, e8, 1, 0, fe, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 4026535744.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(f0000f40)
+ DEBUG probe_rs::architecture::arm::dp                      > Read    DP register CTRL/STAT, value=0xf0000f40
+ DEBUG probe_rs::architecture::arm::dp                      > Reading DP register CTRL/STAT
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 1 transfers (0 additional transfers)
+ TRACE jaylink                                              > write 18 bytes: [cf, 0, 38, 0, ff, 3, 0, 0, 0, 0, ff, 34, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 8 bytes: [0, 4, e8, 1, 0, fe, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 4026535744.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(f0000f40)
+ DEBUG probe_rs::architecture::arm::dp                      > Read    DP register CTRL/STAT, value=0xf0000f40
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register CTRL/STAT, value=0xf0000f41
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, a4, 82, a0, 7, 0, 78, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ TRACE probe_rs::architecture::arm::communication_interface > Searching valid APs
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register IDR
+ DEBUG probe_rs::architecture::arm::communication_interface > Changing AP to 0, AP_BANK_SEL to 15
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register SELECT, value=0x000000f0
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, c4, 2, 78, 0, 0, 0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 24, 2, e0, 8e, 4, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 611778577.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(24770011)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    IDR, value=0x24770011
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register IDR
+ DEBUG probe_rs::architecture::arm::communication_interface > Changing AP to 1, AP_BANK_SEL to 15
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register SELECT, value=0x010000f0
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, c4, 2, 78, 0, 80, 80, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 8, 80, 3b, 12, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 611778577.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(24770011)
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 24, 2, e0, 8e, 4, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 611778577.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(24770011)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    IDR, value=0x0
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register IDR
+ DEBUG probe_rs::architecture::arm::communication_interface > Changing AP to 0, AP_BANK_SEL to 15
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register SELECT, value=0x000000f0
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, c4, 2, 78, 0, 0, 0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 24, 2, e0, 8e, 4, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 611778577.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(24770011)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    IDR, value=0x24770011
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register BASE
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, dc, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 24, 2, e0, 8e, 4, 0, 64, 0, fe, 1, fc, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 611778577.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(24770011)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 3759140867.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(e00ff003)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    BASE, value=0xe00ff003
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register BASE2
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 1c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 64, 0, fe, 1, fc, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 3759140867.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(e00ff003)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    BASE2, value=0x0
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register CSW
+ DEBUG probe_rs::architecture::arm::communication_interface > Changing AP to 0, AP_BANK_SEL to 0
+ DEBUG probe_rs::architecture::arm::dp                      > Writing DP register SELECT, value=0x00000000
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, c4, 2, 0, 0, 0, 0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 1c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 4, 8, 0, 60, 4, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202624.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(23000040)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    CSW, value=0x23000040
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register CSW, value=CSW { DbgSwEnable: 1, HNONSEC: 1, PROT: 6, CACHE: 3, SPIDEN: 0, _RES0: 0, MTE: 0, Type: 0, Mode: 0, TrinProg: 0, DeviceEn: 0, AddrInc: Single, _RES1: 0, SIZE: U8 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 8c, 2, 8, 0, 80, 71, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 20, 0, 80, 11, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202624.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(23000040)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register CSW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 1c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 8, 0, 60, 4, 0, 4, a, 0, 60, e4, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202624.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(23000040)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202640.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(23000050)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    CSW, value=0x23000050
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register CSW, value=CSW { DbgSwEnable: 0, HNONSEC: 0, PROT: 2, CACHE: 3, SPIDEN: 0, _RES0: 0, MTE: 0, Type: 0, Mode: 0, TrinProg: 0, DeviceEn: 1, AddrInc: Off, _RES1: 0, SIZE: U8 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 8c, 2, 20, 0, 80, 11, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 28, 0, 80, 91, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202640.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(23000050)
+ DEBUG probe_rs::architecture::arm::communication_interface > HNONSEC supported: false
+ DEBUG probe_rs::architecture::arm::communication_interface > AP GenericAp { address: ApAddress { dp: Default, ap: 0 } }: MemoryAp(MemoryApInformation { address: ApAddress { dp: Default, ap: 0 }, only_32bit_data_size: false, debug_base_address: 3759140864, supports_hnonsec: false })
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register CSW, value=CSW { DbgSwEnable: 0, HNONSEC: 1, PROT: 2, CACHE: 3, SPIDEN: 0, _RES0: 0, MTE: 0, Type: 0, Mode: 0, TrinProg: 0, DeviceEn: 0, AddrInc: Single, _RES1: 0, SIZE: U32 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 8c, 2, 9, 0, 80, 31, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 28, 0, 80, 91, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202640.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(23000050)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 28, 0, 80, 91, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202640.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(23000050)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, a, 0, 60, e4, 0, 4, 0, 20, 60, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 587202640.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(23000050)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 50397184.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(3010000)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x3010000
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 80, 80, 81, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 50397184.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(3010000)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: a05f0001 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 82, 0, 80, 2f, d0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 80, 80, 81, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 50397184.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(3010000)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register CSW, value=CSW { DbgSwEnable: 0, HNONSEC: 1, PROT: 2, CACHE: 3, SPIDEN: 0, _RES0: 0, MTE: 0, Type: 0, Mode: 0, TrinProg: 0, DeviceEn: 0, AddrInc: Single, _RES1: 0, SIZE: U32 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 8c, 2, 9, 0, 80, 31, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 80, 80, 81, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 50397184.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(3010000)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 80, 80, 81, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 50397184.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(3010000)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 20, 60, e0, 0, 24, 0, 20, 20, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 50397184.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(3010000)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16842753.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1010001)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x1010001
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000ed30 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 98, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 0, 80, 80, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16842753.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1010001)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: 1f }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 82, f, 0, 0, 80, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 0, 80, 80, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16842753.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1010001)
+ TRACE probe_rs::core                                       > clear all hw bps
+ TRACE probe_rs::architecture::arm::core::armv7m            > armv7: get hw bps
+ TRACE probe_rs::architecture::arm::core::armv7m            > get available bp units
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002000 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 0, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 0, 80, 80, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16842753.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1010001)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 24, 0, 20, 20, e0, 0, 4, 4c, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16842753.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(1010001)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x260
+ TRACE probe_rs::architecture::arm::core::armv7m            > get hw bp: 0
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002000 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 0, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 30, 1, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 4c, 0, 0, e0, 0, 4, 4c, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(260)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x260
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002008 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 4, 10, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 30, 1, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 4c, 0, 0, e0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(260)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ TRACE probe_rs::architecture::arm::core::armv7m            > get hw bp: 1
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002000 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 0, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 4, 4c, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x260
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000200c }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 6, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 30, 1, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 4c, 0, 0, e0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(260)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ TRACE probe_rs::architecture::arm::core::armv7m            > get hw bp: 2
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002000 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 0, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 4, 4c, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x260
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002010 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 8, 10, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 30, 1, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 4c, 0, 0, e0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(260)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ TRACE probe_rs::architecture::arm::core::armv7m            > get hw bp: 3
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002000 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 0, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 4, 4c, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x260
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002014 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, a, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 30, 1, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 4c, 0, 0, e0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(260)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ TRACE probe_rs::architecture::arm::core::armv7m            > get hw bp: 4
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002000 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 0, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 4, 4c, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x260
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002018 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, c, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 30, 1, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 4c, 0, 0, e0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(260)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ TRACE probe_rs::architecture::arm::core::armv7m            > get hw bp: 5
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e0002000 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 0, 10, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 4, 4c, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x260
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000201c }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, e, 10, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 30, 1, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(260)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 4c, 0, 0, e0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 608.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(260)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ INFO  probe_rs::flashing::download                         > Found loadable segment, physical address: 0x00010000, virtual address: 0x00010000, flags: 0x4
+ INFO  probe_rs::flashing::download                         > Matching section: ".vector_table"
+ INFO  probe_rs::flashing::download                         > Found loadable segment, physical address: 0x000100c0, virtual address: 0x000100c0, flags: 0x5
+ INFO  probe_rs::flashing::download                         > Matching section: ".text"
+ INFO  probe_rs::flashing::download                         > Found loadable segment, physical address: 0x0001d390, virtual address: 0x0001d390, flags: 0x4
+ INFO  probe_rs::flashing::download                         > Matching section: ".rodata"
+ INFO  probe_rs::flashing::download                         > Found loadable segment, physical address: 0x0002514c, virtual address: 0x10000100, flags: 0x6
+ INFO  probe_rs::flashing::download                         > Matching section: ".data"
+ INFO  probe_rs::flashing::loader                           > Found 4 loadable sections:
+ INFO  probe_rs::flashing::loader                           >     .vector_table at 00010000 (192 bytes)
+ INFO  probe_rs::flashing::loader                           >     .text at 000100C0 (53968 bytes)
+ INFO  probe_rs::flashing::loader                           >     .rodata at 0001D390 (32188 bytes)
+ INFO  probe_rs::flashing::loader                           >     .data at 0002514C (68 bytes)
+ TRACE probe_rs::flashing::loader                           > Adding data at address 0x00010000 with size 192 bytes
+ TRACE probe_rs::flashing::loader                           > Adding data at address 0x000100c0 with size 53968 bytes
+ TRACE probe_rs::flashing::loader                           > Adding data at address 0x0001d390 with size 32188 bytes
+ TRACE probe_rs::flashing::loader                           > Adding data at address 0x0002514c with size 68 bytes
+ DEBUG probe_rs::flashing::loader                           > committing FlashLoader!
+ DEBUG probe_rs::flashing::loader                           > Contents of builder:
+ DEBUG probe_rs::flashing::loader                           >     data: 00010000-00025190 (86416 bytes)
+ DEBUG probe_rs::flashing::loader                           > Flash algorithms:
+ DEBUG probe_rs::flashing::loader                           >     algo apollo3: 0000c000-00100000 (999424 bytes)
+ DEBUG probe_rs::flashing::loader                           > Regions:
+ DEBUG probe_rs::flashing::loader                           >     region: 0000c000-00100000 (999424 bytes)
+ DEBUG probe_rs::flashing::loader                           >      -- using algorithm: apollo3
+ DEBUG probe_rs::flashing::loader                           > Flashing ranges for algo: apollo3
+ INFO  probe_rs::flashing::flasher                          > chosen RAM to run the algo: RamRegion { name: None, range: 10000000..10060000, is_boot_memory: false, cores: ["main"] }
+ DEBUG probe_rs::flashing::flasher                          > Initializing the flash algorithm.
+ DEBUG probe_rs::flashing::flasher                          > Halting core 0
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register CSW, value=CSW { DbgSwEnable: 0, HNONSEC: 1, PROT: 2, CACHE: 3, SPIDEN: 0, _RES0: 0, MTE: 0, Type: 0, Mode: 0, TrinProg: 0, DeviceEn: 0, AddrInc: Single, _RES1: 0, SIZE: U32 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 8c, 2, 9, 0, 80, 31, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: a05f0003 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 82, 1, 80, 2f, 50, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 64, 0, 60, 20, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16973827.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1030003)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x1030003
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 1, 80, 81, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16973827.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1030003)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 64, 0, 60, 20, e0, 0, 64, 0, 60, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 16973827.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(1030003)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x30003
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000ed30 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 98, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 1, 80, 1, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 64, 0, 60, 0, 0, 0, 24, 0, 0, 0, e0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(30003)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 1.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x1
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000ed30 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 98, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 0, 0, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 1.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: 1f }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 82, f, 0, 0, 80, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 0, 0, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 1.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 0, 0, 0, 80, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 1.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(1)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 24, 0, 0, 0, e0, 0, 64, 0, 60, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 1.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(1)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x30003
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000ed30 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 98, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 1, 80, 1, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 64, 0, 60, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(30003)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000ed30 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 98, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: 1f }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 82, f, 0, 0, 80, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::core::armv7m            > Cached halt reason: Halted(Request)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf4 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, fa, 76, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: f }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 82, 7, 0, 0, 0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 64, 0, 60, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x30003
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf8 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, fc, 76, 0, 70, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 1, 80, 1, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 64, 0, 60, 0, 0, 0, 84, 90, 2f, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(30003)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 97412.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(17c84)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x17c84
+ DEBUG probe_rs::flashing::flasher                          > PC = 0x00017c84
+ DEBUG probe_rs::flashing::flasher                          > Reset and halt
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edfc }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, fe, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 42, be, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 97412.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(17c84)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 84, 90, 2f, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 97412.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(17c84)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x0
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edfc }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, fe, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: 1 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 82, 0, 0, 0, 80, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(0)
+ DEBUG probe_rs::architecture::arm::ap                      > Reading register DRW
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 68, 0, ff, 3, 0, 0, 0, 0, ff, 3, 0, 0, 0, 0, ff, 7c, 2, 0, 0, 0, 0, f4, 2, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 4, 0, 0, 0, 0, 0, 64, 0, 60, 0, 0, 0, 0]
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 0.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Read register    DRW, value=0x30003
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000ed0c }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, 86, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 1, 80, 1, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register DRW, value=DRW { data: 5fa0004 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, ec, 2, 2, 0, fd, 82, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 4, 0, 0, 0, 0, 0, 0, 90, 1, 80, 1, 0, 0, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Ok(0)
+ TRACE probe_rs::probe::jlink::swd                          > DAP read 196611.
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Ok(30003)
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register TAR, value=TAR { address: e000edf0 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 2c, 2, f8, 76, 0, f0, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 7c, 0, 0, 0, 0, 0, 0, f0, ff, ff, ff, ff, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Err(NoAcknowledge)
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Err(NoAcknowledge)
+ DEBUG probe_rs::probe::jlink::swd                          > DAP NACK
+ DEBUG probe_rs::probe::jlink::swd                          > Performing line reset!
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 62, 0, ff, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, 0, ff, ff, ff, ff, ff, ff, 53, a, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 0, 0, 0, 0, 0, 0, f0, ff, ff, ff, ff, 3, 0]
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 62, 0, ff, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, 0, ff, ff, ff, ff, ff, ff, 53, a, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 0, 0, 0, 0, 0, 0, f0, ff, ff, ff, ff, 3, 0]
+ TRACE probe_rs::session                                    > clearing hw breaks
+ TRACE probe_rs::session                                    > clearing hw break, core: 0
+ TRACE probe_rs::core                                       > clear all hw bps
+ TRACE probe_rs::architecture::arm::core::armv7m            > armv7: get hw bps
+ TRACE probe_rs::architecture::arm::core::armv7m            > get available bp units
+ DEBUG probe_rs::architecture::arm::ap                      > Writing register CSW, value=CSW { DbgSwEnable: 0, HNONSEC: 1, PROT: 2, CACHE: 3, SPIDEN: 0, _RES0: 0, MTE: 0, Type: 0, Mode: 0, TrinProg: 0, DeviceEn: 0, AddrInc: Single, _RES1: 0, SIZE: U32 }
+ TRACE probe_rs::probe::jlink::swd                          > Adding 2 idle cycles after transfer!
+ DEBUG probe_rs::probe::jlink::swd                          > Performing 2 transfers (1 additional transfers)
+ TRACE jaylink                                              > write 34 bytes: [cf, 0, 72, 0, ff, 83, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, fc, 3, 8c, 2, 9, 0, 80, 31, 0, d0, b, 0, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 16 bytes: [0, 7c, 0, 0, 0, 0, 0, 0, f0, ff, ff, ff, ff, 3, 0, 0]
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 0: Err(NoAcknowledge)
+ DEBUG probe_rs::probe::jlink::swd                          > Transfer result 1: Err(NoAcknowledge)
+ DEBUG probe_rs::probe::jlink::swd                          > DAP NACK
+ DEBUG probe_rs::probe::jlink::swd                          > Performing line reset!
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 62, 0, ff, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, 0, ff, ff, ff, ff, ff, ff, 53, a, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 0, 0, 0, 0, 0, 0, f0, ff, ff, ff, ff, 3, 0]
+ TRACE jaylink                                              > write 30 bytes: [cf, 0, 62, 0, ff, ff, ff, ff, ff, ff, ff, f, 0, 0, 0, 0, 0, ff, ff, ff, ff, ff, ff, 53, a, 0, 0, 0, 0, 0]
+ TRACE jaylink                                              > read 14 bytes: [0, 0, 0, 0, 0, 0, 0, f0, ff, ff, ff, ff, 3, 0]
+ WARN  probe_rs::session                                    > Could not clear all hardware breakpoints: ArchitectureSpecific(RegisterWriteError { address: 0, name: "CSW", source: ArchitectureSpecific(NoAcknowledge) })
+Error: The flashing procedure failed for '/home/gauteh/met/sfy/sfy-code/sfy-buoy/target/thumbv7em-none-eabihf/debug/sfy-buoy'.
+
+Caused by:
+    0: Something during the interaction with the core went wrong
+    1: A core architecture specific error occured
+    2: Failed to write register TAR at address 0x00000004
+    3: An error specific to the selected architecture occured
+    4: Target device did not respond to request.

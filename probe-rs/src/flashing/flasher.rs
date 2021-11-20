@@ -102,7 +102,8 @@ impl<'session> Flasher<'session> {
     }
 
     pub(super) fn double_buffering_supported(&self) -> bool {
-        self.flash_algorithm.page_buffers.len() > 1
+        false
+        // self.flash_algorithm.page_buffers.len() > 1
     }
 
     fn load(&mut self) -> Result<(), FlashError> {
@@ -242,6 +243,8 @@ impl<'session> Flasher<'session> {
             &self.flash_algorithm,
             restore_unwritten_bytes,
         )?;
+
+        let enable_double_buffering = false;
 
         progress.initialized(flash_layout.clone());
 

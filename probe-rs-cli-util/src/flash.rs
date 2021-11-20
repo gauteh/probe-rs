@@ -27,7 +27,7 @@ pub fn run_flash_download(
     download_option.keep_unwritten_bytes = opt.restore_unwritten;
     download_option.dry_run = opt.probe_options.dry_run;
 
-    if !opt.disable_progressbars {
+    if false && !opt.disable_progressbars {
         // Create progress bars.
         let multi_progress = MultiProgress::new();
         let style = ProgressStyle::default_bar()

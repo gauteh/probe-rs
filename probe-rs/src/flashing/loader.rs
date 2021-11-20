@@ -197,9 +197,12 @@ impl FlashLoader {
     pub fn commit(
         &self,
         session: &mut Session,
-        options: DownloadOptions<'_>,
+        mut options: DownloadOptions<'_>,
     ) -> Result<(), FlashError> {
         log::debug!("committing FlashLoader!");
+
+        options.do_chip_erase = false;
+        options.skip_erase = true;
 
         log::debug!("Contents of builder:");
         for (&address, data) in &self.builder.data {

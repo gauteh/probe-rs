@@ -508,6 +508,7 @@ impl<'probe> CoreInterface for Armv6m<'probe> {
     }
 
     fn clear_hw_breakpoint(&mut self, bp_unit_index: usize) -> Result<(), Error> {
+        log::trace!("clear hw arm6");
         let register_addr = BpCompx::ADDRESS + (bp_unit_index * size_of::<u32>()) as u32;
 
         let mut value = BpCompx::from(0);

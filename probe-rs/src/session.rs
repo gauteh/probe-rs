@@ -487,7 +487,9 @@ static_assertions::assert_impl_all!(Session: Send);
 // TODO tiwalun: Enable again, after rework of Session::new is done.
 impl Drop for Session {
     fn drop(&mut self) {
+        log::trace!("clearing hw breaks");
         let result = { 0..self.cores.len() }.try_for_each(|i| {
+            log::trace!("clearing hw break, core: {}", i);
             self.core(i)
                 .and_then(|mut core| core.clear_all_hw_breakpoints())
         });

@@ -138,6 +138,7 @@ impl<T: DapAccess> ApAccess for T {
         R: ApRegister<PORT>,
     {
         log::debug!("Writing register {}, value={:x?}", R::NAME, register);
+        // std::thread::sleep(std::time::Duration::from_millis(100));
         self.write_raw_ap_register(port.into().ap_address(), R::ADDRESS, register.into())
     }
 
@@ -151,6 +152,7 @@ impl<T: DapAccess> ApAccess for T {
         PORT: AccessPort,
         R: ApRegister<PORT>,
     {
+        // std::thread::sleep(std::time::Duration::from_millis(100));
         log::debug!(
             "Writing register {}, block with len={} words",
             R::NAME,

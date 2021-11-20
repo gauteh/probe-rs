@@ -374,6 +374,58 @@ impl<'probe> Armv7m<'probe> {
             sequence,
         })
     }
+
+    fn reset_and_halt_ambiq(&mut self, _timeout: Duration) -> Result<CoreInformation, Error> {
+        log::warn!("using rest_and_halt_ambiq!");
+
+        const AIRCR_ADDR: u32 = 0xE000ED0C;
+        const DHCSR_ADDR: u32 = 0xE000EDF0;
+        const DEMCR_ADDR: u32 = 0xE000EDFC;
+        const MCUCTRL_SCRATCH0: u32 = 0x400401B0;
+        const MCUCTRL_BOOTLDR: u32 = 0x400401A0;
+        const JDEC_PID: u32 = 0xF0000FE0;
+
+        // check if we are in secure mode
+        let r = self.memory.read_word_32(MCUCTRL_BOOTLDR.into())?;
+        let secure = (r & 0x0C00_0000) == 0x0400_0000;
+        log::info!("Ambiq bootload secure mode: {}", secure);
+
+        if secure {
+            // Set MCUCTRL Scratch0, indicating that the Bootloader needs to run, then halt when it is finished.
+            log::info!("Secure mode: bootloader needs to run, and will halt when it has finished.");
+            let scratch0 = self.memory.read_word_32(MCUCTRL_SCRATCH0.into())?;
+            log::debug!("scratch0: {:#x}", scratch0);
+
+            let scratch0 = scratch0 | 0x1;
+            self.memory.write_word_32(MCUCTRL_SCRATCH0.into(), scratch0)?;
+        } else {
+            unimplemented!("Non-secure bootloader not implemented yet.")
+        }
+
+        // Reset system
+        // log::info!("resetting system..");
+        // self.memory.write_word_32(AIRCR_ADDR.into(), 0x05FA0004)?;
+
+        // let start = Instant::now();
+        // let mut ok = false;
+        // while start.elapsed() < Duration::from_millis(15_000) {
+        //     std::thread::sleep(Duration::from_millis(100));
+        //     let dhcsr = self.memory.read_word_32(DHCSR_ADDR.into())?;
+        //     if (dhcsr != 0xffff_ffff) && (dhcsr & 0x0002_0000 > 0) {
+        //         ok = true;
+        //         break;
+        //     }
+        // }
+
+        // log::info!("reset ok: {}", ok);
+
+        // unimplemented!();
+
+        // try to read the program counter
+        let pc = self.read_core_reg(register::PC.address)?;
+
+        Ok(CoreInformation { pc })
+    }
 }
 
 impl<'probe> CoreInterface for Armv7m<'probe> {
@@ -582,9 +634,49 @@ impl<'probe> CoreInterface for Armv7m<'probe> {
     fn reset_and_halt(&mut self, _timeout: Duration) -> Result<CoreInformation, Error> {
         // Set the vc_corereset bit in the DEMCR register.
         // This will halt the core after reset.
+        // self.reset_and_halt_ambiq(_timeout)?;
+        const AIRCR_ADDR: u32 = 0xE000ED0C;
+        const DHCSR_ADDR: u32 = 0xE000EDF0;
+        const DEMCR_ADDR: u32 = 0xE000EDFC;
+        const MCUCTRL_SCRATCH0: u32 = 0x400401B0;
+        const MCUCTRL_BOOTLDR: u32 = 0x400401A0;
+        const JDEC_PID: u32 = 0xF0000FE0;
+        // check if we are in secure mode
+        let r = self.memory.read_word_32(MCUCTRL_BOOTLDR.into())?;
+        let secure = (r & 0x0C00_0000) == 0x0400_0000;
+        log::info!("Ambiq bootload secure mode: {}", secure);
 
-        self.sequence.reset_catch_set(&mut self.memory)?;
-        self.sequence.reset_system(&mut self.memory)?;
+        if secure {
+            // Set MCUCTRL Scratch0, indicating that the Bootloader needs to run, then halt when it is finished.
+            log::info!("Secure mode: bootloader needs to run, and will halt when it has finished.");
+            let scratch0 = self.memory.read_word_32(MCUCTRL_SCRATCH0.into())?;
+            log::debug!("scratch0: {:#x}", scratch0);
+
+            let scratch0 = scratch0 | 0x1;
+            self.memory.write_word_32(MCUCTRL_SCRATCH0.into(), scratch0)?;
+        } else {
+            unimplemented!("Non-secure bootloader not implemented yet.")
+        }
+
+        // Request MCU to reset
+        log::info!("requesting MCU to reset..");
+        self.memory.write_word_32(AIRCR_ADDR, 0x05FA0004)?;
+        std::thread::sleep(Duration::from_millis(1000));
+
+        // wait for reset
+        while {
+            let v = self.memory.read_word_32(DHCSR_ADDR)?;
+            !((v != 0xFFFFFFFF) && (v & 0x00020000) > 0)
+        } {
+            std::thread::sleep(Duration::from_millis(1000));
+            log::info!("waiting for reset..");
+        }
+
+
+        // self.sequence.reset_catch_set(&mut self.memory)?;
+        // std::thread::sleep(Duration::from_millis(1000));
+        // self.sequence.reset_system(&mut self.memory)?;
+        // self.halt(Duration::from_millis(1000))?;
 
         // Update core status
         let _ = self.status()?;
@@ -595,7 +687,20 @@ impl<'probe> CoreInterface for Armv7m<'probe> {
             self.write_core_reg(register::XPSR.address, xpsr_value | XPSR_THUMB)?;
         }
 
-        self.sequence.reset_catch_clear(&mut self.memory)?;
+        // self.write_core_reg(MSP, 0x10000100)?;
+
+        // if secure {
+        //     // Set MCUCTRL Scratch0, indicating that the Bootloader needs to run, then halt when it is finished.
+        //     log::info!("Clear MCUCTRL Scratch0");
+        //     let scratch0 = self.memory.read_word_32(MCUCTRL_SCRATCH0.into())?;
+        //     log::debug!("scratch0: {:#x}", scratch0);
+
+        //     let scratch0 = scratch0 & 0x0;
+        //     self.memory.write_word_32(MCUCTRL_SCRATCH0.into(), scratch0)?;
+        // }
+
+        // self.write_core_reg(register::PC.address, 0x100c0)?;
+        // self.sequence.reset_catch_clear(&mut self.memory)?;
 
         // try to read the program counter
         let pc_value = self.read_core_reg(register::PC.address)?;
@@ -605,6 +710,7 @@ impl<'probe> CoreInterface for Armv7m<'probe> {
     }
 
     fn get_available_breakpoint_units(&mut self) -> Result<u32, Error> {
+        log::trace!("get available bp units");
         let raw_val = self.memory.read_word_32(FpCtrl::ADDRESS)?;
 
         let reg = FpCtrl::from(raw_val);
@@ -669,6 +775,7 @@ impl<'probe> CoreInterface for Armv7m<'probe> {
     }
 
     fn clear_hw_breakpoint(&mut self, bp_unit_index: usize) -> Result<(), Error> {
+        log::trace!("clearing hw bp: {}", bp_unit_index);
         let mut val = FpRev1CompX::from(0);
         val.set_enable(false);
 
@@ -689,9 +796,11 @@ impl<'probe> CoreInterface for Armv7m<'probe> {
 
     /// See docs on the [`CoreInterface::get_hw_breakpoints`] trait.
     fn get_hw_breakpoints(&mut self) -> Result<Vec<Option<u32>>, Error> {
+        log::trace!("armv7: get hw bps");
         let mut breakpoints = vec![];
         let num_hw_breakpoints = self.get_available_breakpoint_units()? as usize;
         { 0..num_hw_breakpoints }.try_for_each(|bp_unit_index| {
+            log::trace!("get hw bp: {}", bp_unit_index);
             let raw_val = self.memory.read_word_32(FpCtrl::ADDRESS)?;
             let ctrl_reg = FpCtrl::from(raw_val);
             // FpRev1 and FpRev2 needs different decoding of the register value, but the location where we read from is the same ...

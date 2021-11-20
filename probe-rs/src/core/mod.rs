@@ -494,6 +494,7 @@ impl<'probe> Core<'probe> {
     /// regardless if they are set by probe-rs, AND regardless if they are enabled or not.
     /// Also used as a helper function in [`Session::drop`](crate::session::Session).
     pub fn clear_all_hw_breakpoints(&mut self) -> Result<(), error::Error> {
+        log::trace!("clear all hw bps");
         for breakpoint in (self.inner.get_hw_breakpoints()?).into_iter().flatten() {
             self.clear_hw_breakpoint(breakpoint)?
         }

@@ -255,6 +255,7 @@ impl<'probe> CoreInterface for Armv8m<'probe> {
     }
 
     fn clear_hw_breakpoint(&mut self, bp_unit_index: usize) -> Result<(), Error> {
+        log::trace!("clear hw arm8");
         let mut val = FpCompX::from(0);
         val.set_enable(false);
         val.set_bp_addr(0);
